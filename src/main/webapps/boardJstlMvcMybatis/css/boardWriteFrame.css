@@ -1,0 +1,151 @@
+/* <div> 레이아웃 */
+#writeWrapper{
+ width:1340px; 
+ margin:auto;
+}
+/* ----------------------------------------- */
+.writeTable{
+  width: 800px;
+  margin:auto;
+  margin-bottom:10px;
+}
+
+
+.td {
+  font-family: serif;
+  color: cornsilk;
+  text-align: center;
+  background-color: saddlebrown;
+  width: 150px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.titleTd {
+  font-family: serif;
+  color: cornsilk;
+  text-align: center;
+  font-weight: bold;
+  background-color: saddlebrown;
+  padding: 0px 20px;
+  height: 40px;
+  font-size: 20px;
+}
+
+
+.inTitle, .inEmail, .contents, .input,.inWriter {
+  font-family: serif;
+  height: 40px;
+  border: 3px solid saddlebrown;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  color:saddlebrown;
+}
+
+.input {
+	width: 200px;
+}
+
+.inTitle, .inEmail {
+  width: 650px;
+}
+
+
+input {
+font-family: serif;
+  height: 40px;
+  width: 244px;
+  border: 3px solid saddlebrown;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  color:saddlebraown;
+}
+
+.contents {
+  width: 650px;
+  height:300px;
+  position: relative;
+  vertical-align:top; /*input text를 상단 지정*/
+}
+
+form{
+  width: 900px;
+  margin: auto;
+}
+
+
+#bodTitle  {
+	font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: saddlebrown;
+    font-family: sans-serif;
+    margin:0;
+}
+
+#contentList {
+	width:1070px;
+	display:inline-block;
+	text-align: right;
+}
+
+.BtnDiv {
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: saddlebrown;
+  font-family: serif;
+}
+
+.BtnDiv .button {
+  background-color: saddlebrown;
+  color: moccasin;
+  width: 150px;
+  height: 50px;
+  border-radius: 15px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.BtnDiv .button:hover {
+  cursor: pointer;
+  background-color: burlywood;
+  color: saddlebrown;
+}
+
+/* 페이지 */
+
+.pagination {
+	margin-top:20px;
+	text-align: center;
+}
+.page {
+	  font-family: serif;
+	  font-weight: bold;
+	  font-size: 25px;
+	  color: saddlebrown;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	  transition: background-color .3s;
+	  border: 1px solid saddlebrown;
+	  border-radius: 5px;
+	  margin: 10px 2px 0 2px;
+	  text-align: center;
+}
+
+/* 활성화된 페이지 */
+.page.active {
+  background-color: saddlebrown;
+  color: white;
+  border: 1px solid saddlebrown;
+}
+
+/* 비활성화된 페이지 */
+.page:hover:not(.active) {
+	background-color: burlywood; 
+}

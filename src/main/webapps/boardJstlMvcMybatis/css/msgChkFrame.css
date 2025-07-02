@@ -1,0 +1,30 @@
+/* <div> 레이아웃 */
+#wrapper{
+    width:1340px; 
+    margin:auto;
+}
+
+table {
+    margin: auto;
+    margin-top : 10px;
+    width: 600px;
+    text-align: center;
+    border-collapse: collapse;
+}
+td {
+    background-color: moccasin;
+    color: saddlebrown;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 30px;
+    height: 100px;
+    border: 3px solid burlywood;
+}
+
+.msg {
+    background-color: cornsilk;
+    color: saddlebrown;
+    font-family: serif;
+    font-size: 25px;
+    height: 400px;
+}

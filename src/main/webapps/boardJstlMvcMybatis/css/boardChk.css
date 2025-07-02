@@ -1,0 +1,59 @@
+/* <div> 레이아웃 */
+#wrapper{
+ width:1340px; 
+ margin:auto;
+}
+/* ----------------------------------------- */
+#chkTable {
+  width: 700px;
+  margin:auto;
+  text-align: center;
+}
+
+#bodTitle  {
+	font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: saddlebrown;
+    font-family: sans-serif;
+    margin:0;
+}
+
+.chkTd {
+  background-color: burlywood;
+  height: 60px;
+  font-family: serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: saddlebrown;
+}
+
+input, .resultChk, #bodMsg{
+  width: 800px;
+  height: 50px;
+  border: 2px solid saddlebrown;
+  font-family: serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.resultChk, #bodMsg {
+	color: saddlebrown;
+	border:none;
+}
+
+.button {
+  width: 150px;
+  height: 45px;
+  background-color: saddlebrown;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: cornsilk;
+  color: saddlebrown;
+}@charset "UTF-8";
