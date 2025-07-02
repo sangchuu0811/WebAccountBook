@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.myBatis.boardV02">
+<!--  ========================================= -->
+	<select id="boardSelAll" resultType="int">
+		SELECT count(*) FROM boardV02
+	</select>
+<!--  ========================================= -->
+	<select id="boardSelPaging" resultType="boardV02.BoardV02DTO">
+		SELECT outerQ.* FROM (
+        SELECT rownum as rnum, innerQ.* 
+        FROM (SELECT * FROM boardV02 ORDER BY bod_no DESC) innerQ 
+    ) outerQ 
+    WHERE outerQ.rnum BETWEEN #{startRow} AND #{endRow}
+	</select>
+<!--  ========================================= -->
+	<insert id="boardIns" parameterType="boardV02.BoardV02DTO">
+	    <selectKey keyProperty="bod_no" resultType="int" order="BEFORE">
+	        SELECT max(bod_no)+1 as bod_no FROM boardV02
+	    </selectKey>
+	
+	    INSERT INTO boardV02 (
+	        bod_no,
+	        bod_writer,
+	        bod_email,
+	        bod_subject,
+	        bod_pwd,
+	        bod_content,
+	        bod_logtime,    
+	        bod_readcnt,   
+	        bod_connIp      
+	    )
+	    VALUES (
+	        #{bod_no}, #{bod_writer}, #{bod_email}, #{bod_subject}, #{bod_pwd},           
+	        #{bod_content}, SYSDATE,  0, #{bod_connIp}       
+	    )
+	</insert>
+
+<!--  ========================================= -->
+	<update id="boardUpd" parameterType="boardV02.BoardV02DTO">
+		UPDATE boardV02 SET 
+			bod_writer = #{bod_writer},
+			bod_email = #{bod_email},
+			bod_subject = #{bod_subject},
+			bod_content = #{bod_content},
+			bod_pwd = #{bod_pwd}
+		WHERE bod_no = #{bod_no} AND bod_pwd = #{bod_pwd}
+	</update>
+<!--  ========================================= -->
+	<delete id="boardDel" parameterType="boardV02.BoardV02DTO">
+		DELETE FROM boardV02
+		WHERE bod_no = #{bod_no} AND bod_pwd = #{bod_pwd}
+	</delete>
+</mapper>
